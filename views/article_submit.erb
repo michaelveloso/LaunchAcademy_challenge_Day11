@@ -1,0 +1,21 @@
+<form action="/articles/submit" method="post">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" value="<%= article.title %>">
+
+  <label for="url">URL:</label>
+  <input type="text" id="url" name="url" value="<%= article.url %>">
+
+  <label for="description">Description:</label>
+  <input type="text" id="description" name="description" value="<%= article.description %>">
+
+  <input type="submit">
+</form>
+
+
+<% if article.errors.length > 0 %>
+<ul>
+  <% article.errors.each do |error| %>
+    <li> <%= error %> </li>
+  <% end %>
+</ul>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Articles <a href="/articles/submit">submitted</a></h1>
+<ul>
+  <% articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <ul>
+    <li><a href="http://<%= article.url %>" target="_blank"><%= article.url %></a></li>
+    <li><%= article.description %></li>
+  </ul>
+  <% end %>
+</ul>
